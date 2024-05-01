@@ -23,7 +23,7 @@ affliated_cost<-function(raw){ # extract affliated party holding fund cost data
     table <- raw[(table_start+1):(table_end-1)]
     table <- str_replace_all(table, "\\s{2,}", "|")
     text_con <- textConnection(table)
-    data_table <- read.csv(text_con, sep = "|",row.names=NULL,col.names = c(1,2,3))
+    suppressWarnings({data_table <- read.csv(text_con, sep = "|",row.names=NULL,col.names = c(1,2,3))
     data_table[,2]<-(gsub(',','',data_table[,2]))
     num_vec<-as.numeric(data_table[,2])
     data_table<-data_table[which(((!is.na(num_vec)) &grepl("\\d.\\d", as.character(num_vec)))| grepl('^-$',data_table[,2])|
@@ -61,7 +61,8 @@ affliated_cost<-function(raw){ # extract affliated party holding fund cost data
     data_table[,1]<-c('申购费','赎回费','销售服务费','支付管理费','支付托管费','交易费','转换费')
     data_table<-data_table[c(4,5,3,1,2,6,7),]
     output_table<-data_table
+    })
   }
-  colnames(output_table)<-c('var','current','past')
+  colnames(output_table)<-c('type','this year','last year')
   return(output_table)
 }

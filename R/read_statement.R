@@ -9,10 +9,10 @@
 #' pdf_content<-read_statement("014645.OF.pdf")
 
 read_statement<-function(file_name){  # Read the fund statement pdf files on url or local files
-  suppressWarnings({raw<-pdf_text(file_name)
+  suppressWarnings({raw<-pdftools::pdf_text(file_name)
   # Split the single pages
-  raw <- map(raw, ~ str_split(.x, "\\n") %>% unlist())})
+  raw <- tidyverse::map(raw, ~ str_split(.x, "\\n") %>% unlist())})
   # Concatenate the splitted pages
-  raw <- reduce(raw, c)
+  raw <- tidyverse::reduce(raw, c)
   return(raw)
 }

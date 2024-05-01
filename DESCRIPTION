@@ -9,7 +9,11 @@ Description: Extract the data from mutual fund's statement used to calculate the
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: pdftools, tidyverse, readxl
+Imports: 
+  pdftools, 
+  tidyverse, 
+  readxl, 
+  stringr
 RoxygenNote: 7.1.2
 Depends: 
-    R (>= 2.10)
+    R (>= 4.1.0)
