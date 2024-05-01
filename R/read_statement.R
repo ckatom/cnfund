@@ -5,14 +5,14 @@
 #' @return Text string data
 #' @export
 #'
-#' @examples download.file('http://www.fund.pingan.com/nasfile/1711755883661.pdf', '014645.OF.pdf')
-#' pdf_content<-read_statement("014645.OF.pdf")
+#' @examples
+#' pdf_content<-read_statement("http://www.fund.pingan.com/nasfile/1711755883661.pdf")
 
 read_statement<-function(file_name){  # Read the fund statement pdf files on url or local files
   suppressWarnings({raw<-pdftools::pdf_text(file_name)
   # Split the single pages
-  raw <- tidyverse::map(raw, ~ str_split(.x, "\\n") %>% unlist())})
+  raw <- map(raw, ~ str_split(.x, "\\n") %>% unlist())})
   # Concatenate the splitted pages
-  raw <- tidyverse::reduce(raw, c)
+  raw <- reduce(raw, c)
   return(raw)
 }

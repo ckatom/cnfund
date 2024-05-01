@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples
-#' connnect_table("014645.OF.pdf",sep='')
+#' connnect_table("'http://www.fund.pingan.com/nasfile/1711755883661.pdf'",sep='')
 
 
 connnect_table<-function(code,filename){

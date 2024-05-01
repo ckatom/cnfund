@@ -16,6 +16,5 @@ Text string data
 Read the text of fund's statement
 }
 \examples{
-download.file('http://www.fund.pingan.com/nasfile/1711755883661.pdf', '014645.OF.pdf')
-pdf_content<-read_statement("014645.OF.pdf")
+pdf_content<-read_statement("http://www.fund.pingan.com/nasfile/1711755883661.pdf")
 }

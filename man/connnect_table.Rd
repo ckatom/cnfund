@@ -18,5 +18,5 @@ Statement data vector containing all the items
 Combine all the statement data together
 }
 \examples{
-connnect_table("014645.OF.pdf",sep='')
+connnect_table("'http://www.fund.pingan.com/nasfile/1711755883661.pdf'",sep='')
 }

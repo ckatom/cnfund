@@ -5,8 +5,8 @@
 #' @return Data result
 #' @export
 #'
-#' @examples download.file('http://www.fund.pingan.com/nasfile/1711755883661.pdf', '014645.OF.pdf')
-#' @examples code_name_list<-matrix(c("014645.OF","014645.OF.pdf"),nrow=1,ncol=2)
+#' @examples code_name_list<-matrix(c("014645.OF",
+#' 'http://www.fund.pingan.com/nasfile/1711755883661.pdf'),nrow=1,ncol=2)
 #' @examples colnames(code_name_list)<-c('code','filename')
 #' output_dat<-funds_output(data.frame(code_name_list))
 
