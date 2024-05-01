@@ -5,9 +5,10 @@
 #' @return Data result
 #' @export
 #'
-#' @examples example_file_loc<-(system.file("pdfdata", "014645.OF.pdf", package = "cnfunds"))
-#' @examples code_name_list<-c("014645.OF",paste(example_file_loc,"//doc//","014645.OF.pdf", sep=''))
-#' @examples output_dat<-funds_output(code_name_list)
+#' @examples download.file('http://www.fund.pingan.com/nasfile/1711755883661.pdf', '014645.OF.pdf')
+#' @examples code_name_list<-matrix(c("014645.OF","014645.OF.pdf"),nrow=1,ncol=2)
+#' @examples colnames(code_name_list)<-c('code','filename')
+#' output_dat<-funds_output(data.frame(code_name_list))
 
 funds_output<-function(code_name_list){   # concatenate the data from different source
 

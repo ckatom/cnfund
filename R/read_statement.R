@@ -5,8 +5,8 @@
 #' @return Text string data
 #' @export
 #'
-#' @examples example_file_loc<-(system.file("pdfdata", "014645.OF.pdf", package = "cnfunds"))
-#' pdf_content<-read_statement(paste(example_file_loc,"//doc//","014645.OF.pdf",sep=''))
+#' @examples download.file('http://www.fund.pingan.com/nasfile/1711755883661.pdf', '014645.OF.pdf')
+#' pdf_content<-read_statement("014645.OF.pdf")
 
 read_statement<-function(file_name){  # Read the fund statement pdf files on url or local files
   suppressWarnings({raw<-pdf_text(file_name)

@@ -16,7 +16,8 @@ Data result
 Output the extracted funds statement data
 }
 \examples{
-example_file_loc<-(system.file("pdfdata", "014645.OF.pdf", package = "cnfunds"))
-code_name_list<-c("014645.OF",paste(example_file_loc,"//doc//","014645.OF.pdf", sep=''))
-output_dat<-funds_output(code_name_list)
+download.file('http://www.fund.pingan.com/nasfile/1711755883661.pdf', '014645.OF.pdf')
+code_name_list<-matrix(c("014645.OF","014645.OF.pdf"),nrow=1,ncol=2)
+colnames(code_name_list)<-c('code','filename')
+output_dat<-funds_output(data.frame(code_name_list))
 }

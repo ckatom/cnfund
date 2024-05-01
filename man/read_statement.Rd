@@ -16,6 +16,6 @@ Text string data
 Read the text of fund's statement
 }
 \examples{
-example_file_loc<-(system.file("pdfdata", "014645.OF.pdf", package = "cnfunds"))
-pdf_content<-read_statement(paste(example_file_loc,"//doc//","014645.OF.pdf",sep=''))
+download.file('http://www.fund.pingan.com/nasfile/1711755883661.pdf', '014645.OF.pdf')
+pdf_content<-read_statement("014645.OF.pdf")
 }
