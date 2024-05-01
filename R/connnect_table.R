@@ -6,7 +6,7 @@
 #' @return Statement data vector containing all the items
 #' @export
 #'
-#' @examples example_file_loc<-(system.file("pdfdata", "014645.OF.pdf", package = "cnfund"))
+#' @examples example_file_loc<-(system.file("pdfdata", "014645.OF.pdf", package = "cnfunds"))
 #' connnect_table("014645.OF",paste(example_file_loc,"//doc//","014645.OF.pdf",sep=''))
 
 

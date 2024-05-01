@@ -18,6 +18,6 @@ Statement data vector containing all the items
 Combine all the statement data together
 }
 \examples{
-example_file_loc<-(system.file("pdfdata", "014645.OF.pdf", package = "cnfund"))
+example_file_loc<-(system.file("pdfdata", "014645.OF.pdf", package = "cnfunds"))
 connnect_table("014645.OF",paste(example_file_loc,"//doc//","014645.OF.pdf",sep=''))
 }

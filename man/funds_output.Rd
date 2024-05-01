@@ -16,7 +16,7 @@ Data result
 Output the extracted funds statement data
 }
 \examples{
-example_file_loc<-(system.file("pdfdata", "014645.OF.pdf", package = "cnfund"))
+example_file_loc<-(system.file("pdfdata", "014645.OF.pdf", package = "cnfunds"))
 code_name_list<-c("014645.OF",paste(example_file_loc,"//doc//","014645.OF.pdf", sep=''))
 output_dat<-funds_output(code_name_list)
 }
